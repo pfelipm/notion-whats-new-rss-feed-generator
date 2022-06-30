@@ -7,3 +7,5 @@ https://script.google.com/macros/s/AKfycbyDWx-2kqgbbubmdqKAu5RLmyl2J_XnDau_j5MY-
 ```
 
 ![](https://user-images.githubusercontent.com/12829262/176773245-55f3e9ec-bc93-414d-acc1-9f8ec34fbe45.gif)
+
+PS: Adapted from this [ Script release notes feed generator](https://github.com/tanabee/google-apps-script-release-notes-feed) by Yuki Tanabe.
