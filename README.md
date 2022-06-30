@@ -8,6 +8,6 @@ This is a quick and rather crude attempt at an Apps Script webapp that scrapes [
 https://script.google.com/macros/s/AKfycbyDWx-2kqgbbubmdqKAu5RLmyl2J_XnDau_j5MY-Gg_gxvYcjOr9Lkoaz9-V9zhsfPQ/exec
 ```
 
-![](https://user-images.githubusercontent.com/12829262/176773245-55f3e9ec-bc93-414d-acc1-9f8ec34fbe45.gif)
+![](https://user-images.githubusercontent.com/12829262/176777336-656e2566-e18f-4776-a66d-ccaa3a92fb10.gif)
 
 PS: Adapted from this [Apps Script release notes feed generator](https://github.com/tanabee/google-apps-script-release-notes-feed) by Yuki Tanabe.
