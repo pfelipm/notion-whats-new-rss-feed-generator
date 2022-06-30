@@ -1,6 +1,6 @@
 # An RSS feed generator for Notion's releases
 
-This is a quick and rather crude attempt at anApps Script webapp that scrapes [Notion's release page](https://www.notion.so/releases) and generates an RSS feed that contains the most recently published updates. It uses the [Cheerio library](1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0) for Apps Script (ID `1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0`). Please, bear in mind that this was just a quick hack to play a little bit with Cheerio and could break anytime.
+This is a quick and rather crude attempt at an Apps Script webapp that scrapes [Notion's release page](https://www.notion.so/releases) and generates an RSS feed that contains the most recently published updates. It uses the [Cheerio library](1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0) for Apps Script (ID `1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0`). Please, bear in mind that this was just a quick hack to play a little bit with Cheerio and could break anytime.
 
 You can either make a copy of the provided codebase and deploy your own webapp or simply use the URL of this pre-deployed instance to add the RSS to your newsreader:
 
