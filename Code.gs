@@ -27,7 +27,7 @@ const getFeed = () => {
     items.push({
       title: $(elem).text(),
       firstParagraph: $(elem).parent().parent().next().children().first().text(),
-      url: linkUrls.eq(i).attr('href') ? linkUrls.eq(i).attr('href') : '',
+      url: linkUrls.eq(i).attr('href') ? linkUrls.eq(i).attr('href') : 'https://www.notion.so/releases',
       date: Utilities.formatDate(new Date(date), 'GMT', 'E, dd MMM YYYY') + ' 00:00:00 GMT'
     });
   });
@@ -44,8 +44,12 @@ const getFeed = () => {
 }
 
 const doGet = () => {
-
   return ContentService.createTextOutput(getFeed()).setMimeType(
     ContentService.MimeType.RSS
   );
+}
+
+// Cleanup (for testing)
+function deleteCache() {
+  CacheService.getScriptCache().remove(CACHE_KEY);
 }

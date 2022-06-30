@@ -1,19 +1,26 @@
-<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
   <channel>
     <title>Notion Release Notes</title>
     <link>https://www.notion.so/releases</link>
     <description>This feed provides the most recent items in Notion's What's New page.</description>
     <image>
       <url>https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png</url>
-      <title>Notion's logo</title>
-      <link>https://notion.so</link>
+      <title>Notion Release Notes</title>
+      <link>https://www.notion.so/releases</link>
     </image>
     <? for (item of items) { ?>
       <item>
         <title><?= item.title ?></title>
         <link><?= item.url ?></link>
         <description><?= item.firstParagraph ?></description>
-        <pubDate><?= item.date ?></pubDate>
+        <pubDate><?= item.date ?></pubDate>      
+        <media:content 
+        xmlns:media="http://search.yahoo.com/mrss/" 
+        url="https://www.notion.so/cdn-cgi/image/format=auto,width=128,quality=100/front-static/pages/releases/releases-illustration.png" 
+        medium="image" 
+        type="image/jpeg" 
+        width="128" 
+        height="170" />
       </item>
     <? } ?>
   </channel>
