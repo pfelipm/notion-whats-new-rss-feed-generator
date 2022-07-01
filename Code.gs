@@ -1,7 +1,10 @@
 /**
- * Returns an RSS feed for https://www.notion.so/releases
- * Adapted from https://github.com/tanabee/google-apps-script-release-notes-feed
+ * Returns an RSS feed for https://www.notion.so/releases,
+ * only parses the contents (h3 sections) of the most recent update.
+ * Sometimes thumbnail pics do not appear in preview :-?.
  * Requires Cheerio →  ID: 1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0
+ *
+ * [Adapted from https://github.com/tanabee/google-apps-script-release-notes-feed]
  * 
  * @pfelipm | 30/06/22
  */
@@ -19,7 +22,11 @@ const getFeed = () => {
 
   const content = UrlFetchApp.fetch(URL).getContentText();
   const $ = Cheerio.load(content);
+  
+  // Same date for last updates
   const date = $('time').first().text();
+
+  // There is usually a "Learn more" link at the bottom of each section
   const linkUrls = $('a:contains("Learn more")');
 
   const items = [];
@@ -27,7 +34,9 @@ const getFeed = () => {
     items.push({
       title: $(elem).text(),
       firstParagraph: $(elem).parent().parent().next().children().first().text(),
-      url: linkUrls.eq(i).attr('href') ? linkUrls.eq(i).attr('href') : 'https://www.notion.so/releases',
+      // If no URL available, use the What's New page URL
+      url: linkUrls.eq(i).attr('href') ? linkUrls.eq(i).attr('href') : URL,
+      // Date needs the 00:00:00 time part for newsreaders to acknowledge it
       date: Utilities.formatDate(new Date(date), 'GMT', 'E, dd MMM YYYY') + ' 00:00:00 GMT'
     });
   });
@@ -38,6 +47,7 @@ const getFeed = () => {
   
   // console.info(feed);
   
+  // Cache lives for 6 hours
   cache.put(CACHE_KEY, feed, 6 * 60 * 60);
   return feed;
 
