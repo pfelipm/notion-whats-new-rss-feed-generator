@@ -1,8 +1,9 @@
 /**
  * Returns an RSS feed for https://www.notion.so/releases,
  * only parses the contents (h3 sections) of the most recent update.
- * Sometimes thumbnail pics do not appear in preview :-?.
- * Requires Cheerio →  ID: 1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0
+ * Thumbnail pics do not appear in preview (Feedly) if first
+ * media element in post is a video?
+ * Requires Cheerio → Lib ID: 1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0
  *
  * [Adapted from https://github.com/tanabee/google-apps-script-release-notes-feed]
  * 
