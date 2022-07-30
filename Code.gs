@@ -46,7 +46,7 @@ const getFeed = () => {
   template.items = items;
   const feed = template.evaluate().getContent();
   
-  // console.info(feed);
+  console.info(feed);
   
   // Cache lives for 6 hours
   cache.put(CACHE_KEY, feed, 6 * 60 * 60);
