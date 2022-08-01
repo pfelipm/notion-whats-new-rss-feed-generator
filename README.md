@@ -5,6 +5,9 @@
 ```
 As of 30/07/22, the Notion Release Notes webpage is generated dynamically,
 which renders this script useless as Cheerio can't parse dynamic contents.
+Some relevant text content can still be extracted using Cheerio, but I guess
+that adapting this script or using a more complex solution (Pupetter, etc.)
+probably is not worth the hassle.
 
 End of story.
 ```
